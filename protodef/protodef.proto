@@ -16,6 +16,6 @@ message PersonRequest {
 	int32 id = 1;
 }
 
-service Service {
+service PersonService {
 	rpc GetPerson(PersonRequest) returns (Person) {}
 }
