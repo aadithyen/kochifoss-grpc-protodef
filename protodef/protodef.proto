@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package protodef;
+
+// import "google/protobuf/empty.proto";
+
+option go_package = "./protodef";
+
+message Person {
+	int32 id = 1;
+	string name = 2;
+	int32 age = 3;
+}
+
+message PersonRequest {
+	int32 id = 1;
+}
+
+service Service {
+	rpc GetPerson(PersonRequest) returns (Person) {}
+}
